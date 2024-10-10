@@ -1,0 +1,45 @@
+
+
+
+.dash-container {
+  list-style: none; /* Supprime les puces par défaut */
+  padding: 0;
+  margin: 0;
+}
+
+.dash-container li {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem;
+  /*border-bottom: 1px solid #ccc; /* Ligne de séparation entre les éléments */
+}
+
+.dash-container li::before {
+  content: attr(data-num) "   ";
+  width: 2rem; /* Largeur de la partie numérotée */
+  text-align: left; 
+  margin-right: 0.5rem;
+}
+
+
+.dash-container li[data-tiret]::before {
+  content: attr(data-num) ' — ' /* Tiret cadratin (U+2014) */
+}
+
+
+ul.a > li{
+  margin: 20;
+  color: rgb(233, 16, 179);
+  list-style: circle; 
+}
+
+ul.b {
+  list-style-type: square;
+  color: blueviolet;
+}
+
+ul.c {
+  list-style-type: upper-roman;
+  color: rgba(10, 119, 123, 0.5)
+}
+

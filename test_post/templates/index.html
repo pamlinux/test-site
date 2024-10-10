@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h1>Super resolution image treatment</h1>
+      <form method="post" id="myForm">
+         <label for="taskname" style="font-size: 20px">Task name*:</label><br>
+         <input type="text" name="taskname" id="taskname"><br>
+         <label for="tasknumber" style="font-size: 20px">Task number*:</label><br>
+         <input type="number" name="tasknumber" id="tasknumber">
+         <p style="display:inline"><b>* Cannot be null</b></p><br><br>
+         <input type="button" value="Start" onclick="test_json ()">
+      </form>
+      <div id="responseArea"></div>
+      <script>
+         function submitForm() {
+             var formElement = document.getElementById('myForm');
+             var data = new FormData(formElement);
+             fetch('/submit', {
+                   method: 'POST',
+                   body: data,
+                 })
+                 .then(resp => resp.text())  // or, resp.json(), etc.
+                 .then(data => {
+                   document.getElementById("responseArea").innerHTML = data;
+                 })
+                 .catch(error => {
+                   console.error(error);
+                 });
+         }
+         function test_json() {
+             const lass = [["comple", false], ["a", true], ["nos", false]];
+             const myJSON = JSON.stringify(lass);
+
+             var item = {
+                          "name": "Foo",
+                          "description": "An optional description",
+                          "price": 52.2,
+                          "tax": 3.5,
+                          "sup" : [["comple", false], ["a", true], ["nos", false]]
+                        }
+             var data = JSON.stringify(item);
+             fetch('/submit2', {
+                   method: 'POST',
+                   headers: {
+                     'Accept': 'application/json',
+                     'Content-Type': 'application/json'
+                   },
+                  body: data,
+                 })
+                 .then(resp => resp.text())  // or, resp.json(), etc.
+                 .then(data => {
+                   document.getElementById("responseArea").innerHTML = data;
+                 })
+                 .catch(error => {
+                   console.error(error);
+                 });
+         }
+      </script>
+   </body>
+</html>

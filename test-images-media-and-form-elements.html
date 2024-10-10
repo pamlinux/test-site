@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dimensionnement des images et d'autres &eacute;l&eacute;ments non usuels</title>
+    <link rel="stylesheet" href="styles/test-images-media-and-form-elements.css">
+</head>
+
+<body>
+<h1>Dimensionnement des images et d'autres &eacute;l&eacute;ments non usuels</h1>
+
+<section class="preview">
+<div class="wrapper">
+<div class="box"><img src="images/star2.png" alt="star"></div>
+<div class="box"><img src="images/balloons.jpg" alt="balloons"></div>
+</div>
+</section>
+
+<p></p>
+
+<h2>Avec <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit</a></h2>
+<section class="preview">
+<div class="wrapper">
+  <div class="align-middle-container">
+    <p>Cover</p>
+    <div class="box2"><img src="images/balloons.jpg" alt="balloons" class="cover img2"></div>
+  </div>
+  <div class="align-middle-container">
+    <p>Contain</p>
+    <div class="box2"><img src="images/balloons.jpg" alt="balloons" class="contain img2"></div>
+  </div>
+  <div class="align-middle-container">
+    <p>Fill</p>
+    <div class="box2"><img src="images/balloons.jpg" alt="balloons" class="fill img2"></div>
+  </div>
+
+</div>
+</section>
+
+<hr>
+
+<h2>Avec display:grid</h2>
+<p></p>
+<section class="preview">
+<div class="wrapper2">
+  <img src="images/star2.png" alt="star">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</section>
+
+
+<h2>Avec display:grid mais width et height &agrave; 100% pour l'&eacute;toile</h2>
+<p></p>
+<section class="preview">
+<div class="wrapper2">
+  <img class="img2" src="images/star2.png" alt="star">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</section>
+
+<hr>
+
+<h2>Style des formulaires</h2>
+<p></p>
+<section class="preview">
+      <form>
+        <div><label for="name">Nom</label>
+        <input type="text" id="name"></div>
+        <div><label for="email">Email</label>
+        <input type="email" id="email"></div>
+
+        <div class="buttons"><input type="submit" value="Submit"></div>
+      </form>
+</section>
+
+<address></address>
+<!-- hhmts start -->Last modified: Sat Feb  4 19:24:35 CET 2023 <!-- hhmts end -->
+</body>
+</html>

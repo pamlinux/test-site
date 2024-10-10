@@ -1,0 +1,46 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  div.lesson-container {
+    display: table;
+    margin: 0 auto;
+    color: rgb(93, 0, 255);
+  }
+  
+  div.lesson-container p {
+    display: table-row;
+  }
+  
+  div.lesson-container p label.line-nr {
+    display: table-cell;
+    margin-bottom: 10px;
+    text-align: right;
+    color: red;
+  }
+  div.lesson-container p label.dialogue-dash {
+    display: table-cell;
+    margin-bottom: 10px;
+    white-space: pre;
+    text-align: right;
+    color: rgb(54, 196, 83);
+  }
+  
+  form label {
+    width: 200px;
+    padding-right: 5%;
+    text-align: right;
+  }
+  
+  form input {
+    width: 300px;
+  }
+  
+  form p {
+    display: table-caption;
+    caption-side: bottom;
+    width: 400px;
+    color: #999;
+    font-style: italic;
+  }
+  

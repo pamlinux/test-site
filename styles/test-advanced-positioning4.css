@@ -1,0 +1,15 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+    height: 2000px;
+}
+
+dt {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 1em 0;
+}

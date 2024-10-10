@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple template</title>
+  </head>
+  <body>
+    <script>
+        const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+        WebAssembly.instantiateStreaming(fetch("wasm/memory.wasm"), {
+          js: { mem: memory }
+        }).then((results) => {
+          // add code here
+          const i32 = new Uint32Array(memory.buffer);
+
+          for (let i = 0; i < 30; i++) {
+            i32[i] = i;
+          }
+
+        const sum = results.instance.exports.accumulate(25, 30);
+        console.log(sum);
+        });
+
+    </script> 
+  </body>
+</html>

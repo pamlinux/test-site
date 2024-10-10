@@ -1,0 +1,24 @@
+html {
+    font-size: 1em;
+}
+
+
+
+
+ @media(orientation: landscape) {
+    .orientation {
+        color: rebeccapurple;
+    }
+ }
+
+ @media (pointer: fine) {
+    .finepointer {
+        color: green;
+    }
+}
+
+  @media (pointer: coarse) {
+    .coarsepointer {
+        color: blue;
+    }
+}

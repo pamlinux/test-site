@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript examples</title>
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Test le click secondaire</h1>
+
+    <p id="testElement">Clicker ici pour tester les diff&eacute;rents click</p>
+
+    <script>
+      const testElement = document.getElementById("testElement");
+      
+      function onMouseDown (e)
+      {
+          console.log(e)
+          if (e.which === 1 || e.button === 0)
+          {
+              console.log('"Left" at ' + e.clientX + 'x' + e.clientY);
+          }
+
+          if (e.which === 2 || e.button === 1)
+          {
+              console.log('"Middle" at ' + e.clientX + 'x' + e.clientY);
+          }
+
+          if (e.which === 3 || e.button === 2)
+          {
+              console.log('"Right" at ' + e.clientX + 'x' + e.clientY);
+              e.stopPropagation();
+              e.preventDefault();
+          }
+
+          if (e.which === 4 || e.button === 3)
+          {
+              console.log('"Back" at ' + e.clientX + 'x' + e.clientY);
+          }
+
+          if (e.which === 5 || e.button === 4)
+          {
+              console.log('"Forward" at ' + e.clientX + 'x' + e.clientY);
+          }
+      }
+        
+    
+
+
+      function contextMenu (e) 
+      {
+        if (e.which === 1 || e.button === 0)
+          {
+              console.log('"Left" at ' + e.clientX + 'x' + e.clientY);
+          }
+
+          if (e.which === 2 || e.button === 1)
+          {
+              console.log('"Middle" at ' + e.clientX + 'x' + e.clientY);
+          }
+
+          if (e.which === 3 || e.button === 2)
+          {
+              console.log('"Right" at ' + e.clientX + 'x' + e.clientY);
+              e.stopPropagation();
+              e.preventDefault();
+          }
+
+          if (e.which === 4 || e.button === 3)
+          {
+              console.log('"Back" at ' + e.clientX + 'x' + e.clientY);
+          }
+
+          if (e.which === 5 || e.button === 4)
+          {
+              console.log('"Forward" at ' + e.clientX + 'x' + e.clientY);
+          }
+      }
+
+      testElement.addEventListener("contextmenu", contextMenu)
+      testElement.addEventListener("mousedown", onMouseDown)
+
+    </script>
+
+
+
+
+  </body>
+</html>

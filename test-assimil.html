@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Leçon 1</title>
+    <style>
+      button {
+        margin: 10px;
+        font-size: 300%;
+        padding: 30px;
+      };
+    </style>
+
+</head>
+
+  <body>
+    <h2 id="demo" onclick="sentenceClick('001')">Leçon 1.</h2>
+    <h2 id="demo" onclick="sentenceClick('002')">Leçon 2.</h2>
+
+    <audio id="audioTag" src="audios/assimil/FULL-Lessons/L001-LESSON.mp3"/>
+    <script>
+
+
+
+      function sentenceClick(val) {
+        srcBengining = "audios/assimil/FULL-Lessons/L"
+        srcEnd = "-LESSON.mp3"
+        fn = srcBengining.concat(val, srcEnd)
+        console.log(fn)
+        var audioEl = document.getElementById("audioTag");
+        audioEl.src = fn
+
+        audioEl.load();
+        audioEl.play();
+        console.log(val)
+      }
+
+    </script>
+
+
+  </body>
+</html>

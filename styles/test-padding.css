@@ -1,0 +1,19 @@
+.container {
+    border: 5px solid blue;
+}
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+}
+    
+.box {
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 4em;
+}
+
+.container {
+    padding: 40px;
+}

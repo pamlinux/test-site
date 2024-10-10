@@ -1,0 +1,24 @@
+.links-list a {
+  background-color: rgb(179,57,81);
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.links-list a:hover {
+  background-color: rgb(128, 28, 40);
+  color: #fff;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+}
+    

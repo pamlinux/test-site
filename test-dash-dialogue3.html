@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="UTF-8">
+
+    <style>
+        div.lesson-container {
+            display: table;
+            margin-left: 0%;
+        }
+  
+        div.lesson-container p {
+            display: table-row;
+            margin-left: 0px;
+        }
+
+        div.lesson-container > div {
+            display: table-row;
+            margin-left: 0px;
+        }
+ 
+        div.lesson-container p label.line-nr {
+            display: table-cell;
+            width: 2rem; 
+            margin-bottom: 10px;
+            text-align: right;
+            vertical-align: middle;
+            
+        }
+        
+        div.lesson-container div label.line-nr {
+            display: table-cell;
+            width: 2rem; 
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        
+        div.lesson-container p label.dialogue-dash {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+            white-space: pre;
+            margin-bottom: 10px;
+        }
+        
+        
+        div.lesson-container div label.dialogue-dash {
+            display: table-cell;
+            /*margin-bottom: 10px;*/
+            white-space: pre;
+            text-align: right;
+        }
+        
+        div.lesson-container div div {
+            display: table-cell;
+            margin-bottom: 0px;
+            height: auto;
+            white-space: pre;
+            text-align: right;
+        }
+        
+        .dialogue-line-nr {
+            font-family: monospace;
+        }
+
+        .activeBox {
+            /*display: table-cell;*/
+            border: solid blue;
+            border-width: 2px 2px;
+            vertical-align: middle;
+            padding-left: 1rem;
+        }
+        
+        .normalText {
+            display: table-cell;
+        }
+
+        .activeP {
+            /*vertical-align: middle;*/
+            height: 3rem;
+        }
+    </style>
+</header>
+<body>
+    <div class="lesson-container">
+        <p id="id_1"><label class="line-nr">1</label><label class="dialogue-dash"> — </label><label>Han abierto otra hamburguesería en el barrio.</label></p>
+        <p id="id_2"><label class="line-nr">2</label><label class="dialogue-dash"> — </label><label>Sí. Van cerrando los restaurantes de toda la vida…</label></p>
+        <p id="id_3"><label class="line-nr">3</label><label class="dialogue-dash">  </label><label>Ahora la gente prefiere comer de pie, sin cuchara, cuchillo ni tenedor.</label></p>
+        <p id="id_4" class="activeP"><label class="line-nr">4</label><label class="dialogue-dash"> — </label><label class="activeBox">¿Y eso qué es?</label></p>
+        <p id="id_5"><label class="line-nr">5</label><label class="dialogue-dash">  </label><label>Pues, por ejemplo, en un vaso pequeño ponen un huevo abajo, cebolla en medio y patata arriba.</label></p>
+        <p id="id_6"><label class="line-nr">6</label><label class="dialogue-dash"> — </label><label>En menos que canta un gallo cancelan el vuelo y te dejan tirado en el aeropuerto. </label></p>
+    </div>
+    <div>
+        <button id="b2" value="2" onclick="proceed(2)">2</button>
+        <button id="b4" value="4" onclick="proceed(4)">4</button>
+        <button id="b5" value="5" onclick="proceed(5)">5</button>
+        <button id="b6" value="6" onclick="proceed(6)">6</button>
+
+        <p class="activeBox">test 1</p>
+    </div>
+
+    <p style="white-space: pre-wrap;">
+            Ceci est un paragraphe. 
+        Vous pouvez y insérer des sauts de ligne 
+        et conserver l'indentation.
+    </p>
+    <script>
+        function proceed(value) {
+            console.log(value);
+            id = "id_" + value;
+            val = id.substring(3, id.length);
+            console.log(val)
+            if (val == value) {
+                console.log("coucou");
+            }
+            para = document.getElementById(id);
+            paraElements = para.childNodes;
+            para.classList.toggle('activeP');
+            paraElements[2].classList.toggle('activeBox');
+            paraElements[2].classList.add('normalText');
+            console.log(paraElements);
+            console.log(para);
+        }
+    </script>
+</body>
+</html>

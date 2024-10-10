@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Random color example — event handler attribute</title>
+    <style>
+      button {
+        margin: 10px
+      };
+    </style>
+  </head>
+  <body>
+    <button>Changer la couleur avec btn.onclick sans id</button>
+    <button onclick="bgChange()">Changer la couleur avec attribut onclick, sans btn</button>
+    <button id="change">Changer la couleur avec btn.ondblclick avec id</button>
+    <button id="change2">Changer la couleur avec btn.onmouseover avec id</button>
+    <button id="change3">Changer la couleur avec btn.addEventListener</button>
+    <script>
+      function random(number) {
+        return Math.floor(Math.random()*number);
+      }
+
+      function bgChange() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+      }
+
+      var btn = document.querySelector('button');
+      var btn2 = document.querySelector('#change');
+      var btn3 = document.querySelector('#change2');
+      var btn4 = document.querySelector('#change3');
+
+      function random(number) {
+        return Math.floor(Math.random()*(number+1));
+      }
+
+      btn.onclick = bgChange;
+      btn2.ondblclick = bgChange;
+
+      window.onkeydown = bgChange;
+
+      btn3.onmouseover = bgChange;
+
+      btn4.addEventListener('click', bgChange);
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+.box {
+    background-color: #567895;
+}
+
+.box h2 {
+  background-color: black;
+  color: white;
+}
+span {
+  background-color: rgba(255,255,255,.5);
+}
+
+.wrapper {
+    padding: 5px;
+    border: 1px solid blue;    
+    background-color: yellow;
+}
+
+.wrapper {
+    display: flex;
+}
+
+
+.a {
+    
+    background-image: url(../images/balloons.jpg);
+    height: 150px;
+    width: 200px;
+}
+
+.b {
+    background-image: url(../images/star.png);
+    height: 150px;
+    width: 200px;
+}
+
+.box2 {
+    background-color: #567895;
+    margin: 20px;
+}
+
+.box3 {
+    width: 600px;
+    height: 300px;
+    background-image: url(../images/star.png);
+    background-repeat: repeat;
+}
+    
+.preview {
+    width: 90%;
+    max-width: 700px;
+    border: 1px solid #4D4E53;
+    border-radius: 2px;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 10px;
+}
+
+.box4 {
+    width: 500px;
+    height: 300px;
+    padding: .5em;
+    border: 1px solid #ccc;
+    margin: 20px;
+    background-image: url(../images/balloons.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.box5 {
+    width: 500px;
+    height: 300px;
+    padding: .5em;
+    border: 1px solid #ccc;
+    margin: 20px;
+    background-image: url(../images/star.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position: 20px 50%;
+    background-position: top 30% right 30%;
+}
+
+.a2 {
+    background-image: linear-gradient(105deg, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+    width: 300px;
+    height: 150px;
+    margin: 25px;
+}
+
+.b2 {
+  background-image: radial-gradient(circle, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+  background-size: 100px 50px;
+  width: 300px;
+  height: 150px;
+  margin: 25px;
+}
+
+.box6 {
+  width: 500px;
+  height: 300px;
+  padding: .5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+  background-image: url(../images/star.png), url(../images/big-star.png);
+}
+
+section {
+    display: flex;
+    background-color: yellow;
+    
+}
+
+article {
+    flex: 1;
+    height: 400px;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(../images/emoji.png);
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 1%;
+    overflow: auto;
+}
+
+article pre {
+    height: 800px;
+}
+
+.fixed, .scroll {
+    margin-right: 1%;
+}
+
+.fixed {
+    background-attachment: fixed;
+}
+
+.scroll {
+    background-attachment: scroll;
+}
+
+.local {
+    background-attachment: local;
+}
+
+footer {
+    clear: both;
+}
+ 
+.box7 {
+  width: 500px;
+  height: 300px;
+  padding: .5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+  background:   
+    linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
+url(../images/big-star.png) center no-repeat, 
+    rebeccapurple;
+}
+
+.box8 {
+  background-color: #567895;
+  border: 5px solid #0b385f;
+  border-bottom-style: dashed;
+  color: #fff;
+}
+
+.box8 h2 {
+  border-top: 2px dotted rebeccapurple;
+  border-bottom: 1em double rgb(24, 163, 78);
+}
+
+.box9 {
+  border: 10px solid rebeccapurple;
+  border-radius: 1em;
+  background-color: #567895;
+  border-top-right-radius: 10% 30%;
+  padding: .5em;
+  color: #ffffff;
+}
+    

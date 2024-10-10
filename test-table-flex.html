@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <style>
+            .tableau-conteneur {
+  display: table;
+  width: 100%; /* Largeur maximale pour l'exemple */
+}
+
+.ligne {
+  display: table-row;
+}
+
+.cellule {
+  display: table-cell;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.ligne-flexible {
+  display: flex;
+  flex: 1;
+  /* Styles pour la ligne flexible */
+}
+        </style>
+    </header>
+    <body>
+        <div class="tableau-conteneur">
+            <div class="ligne">
+              <div class="cellule">Cellule 1</div>
+              <div class="cellule">Cellule 2</div>
+            </div>
+            <div class="ligne ligne-flexible">
+              <div class="cellule">Cellule 1 (flexible)</div>
+              <div class="cellule">Cellule 2 (flexible)</div>
+            </div>
+            <div class="ligne">
+              <div class="cellule">Cellule 1</div>
+              <div class="cellule">Cellule 2</div>
+            </div>
+        </div>
+    </body>
+</html>

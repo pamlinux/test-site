@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<header>
+    <style>
+        .A {
+            background-color: orange;
+            color: black; 
+        }
+        .B {
+            background: rgba(231, 237, 238, 0.377);
+            color: black; 
+        }
+        .E {
+            background: greenyellow;
+            color: black; 
+        }
+        .G {
+            background-color: rgba(152, 27, 198, 0.75);
+            color: black; 
+        }
+        .O {
+            background: rgba(27, 75, 198, 0.75);
+            color: black; 
+        }
+        .S {
+            background: yellow;
+            color: black; 
+        }
+        .V {
+            background: rgba(198, 27, 144, 0.75);
+            color: black; 
+        }
+        input {
+            width: 32px;
+            height: 32px;
+            font-weight: bold;
+        }
+    </style>
+</header>
+<body>
+    <h1>mark</h1>
+    <p>Juste un <mark class="A">test de couleur</mark> de la balisse mark, ici avec la couleur <mark class="A">orange</mark>. Je l'utilise pour symboliser les accents tonique</p>
+    <p>Ici avec la couleur <mark>standard</mark>. Encore la <mark class="S">couleur</mark> standard, mais reproduite avec la fonction rgba</p>
+    <p>Cette <mark class="B">couleur</mark> symbolise un blanc ou trou de mémoire</p>
+    <p><mark class="E">Celle-ci</mark> une erreur qui n'en est pas vraiment une avec par exemple l'utilisation d'un synonyme</p>
+    <p>Ici, encore une autre <mark class="G">couleur</mark> utilisée pour symboliser la grammaire</p>
+    <p>Cette couleur symbolise l'<mark class="O">ortographe d'usage.</mark></p>
+    <p>Et enfin <mark class="V">cette couleur-ci</mark> pour les conjugaison de verbes</p>
+    <p>Soit en résumer : <mark class="A">A</mark><mark class="B">B</mark><mark class="E">E</mark><mark class="G">G</mark><mark class="O">O</mark><mark class="S">S</mark><mark class="V">V</mark></p>
+    <h2>Utilisation</h2>
+    <input type="button" value="S" class="S" onclick="proceedSelection(false, 'S')" />
+    <input type="button" value="A" class="A" onclick="proceedSelection(false, 'A')" />
+    <input type="button" value="V" class="V" onclick="proceedSelection(false, 'V')" />
+</body>
+</html>

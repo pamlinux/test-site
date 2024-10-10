@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<body>
+    <h1>Tester un compteur</h1>
+    <input type="number" id="myCounter" value="0">
+
+    <script>
+        const counter = document.getElementById('myCounter');
+
+        // Pour limiter la valeur minimale à 0 :
+        counter.min = 0;
+
+        // Pour limiter la valeur maximale à 100 :
+        counter.max = 100;
+
+        // Pour afficher un message personnalisé lors du changement de valeur :
+        counter.addEventListener('change', () => {
+            console.log('Nouvelle valeur du compteur :', counter.value);
+         // Ici, vous pouvez ajouter votre propre logique, par exemple envoyer une requête AJAX
+        });
+    </script>
+</body>
+</html>

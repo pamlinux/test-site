@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+   label {
+      display: inline-block;
+      width: 150px;
+      text-align: right;
+    }
+    #plusSign {
+        text-align: center;
+        width: 3rem;
+    }
+  </style>
+</head>
+  <body>
+    <h1>Additionner 2 nombres entiers</h1>
+   <form>
+        <input id="A" type="number" />
+        <label id="plusSign">+</label>
+        <input id="B" type="number" />
+        <button id="equal">=</button>
+        <span id="output"></span>
+    </form>
+    <script>
+        const A = document.querySelector("#A");
+        const B = document.querySelector("#B");
+        const output = document.querySelector("#output");
+        const equalBtn = document.querySelector("#equal");
+        let adder;
+        let firstNumber;
+        let secondNumber;
+        WebAssembly.instantiateStreaming(fetch("wasm/adder.wasm"))
+         .then(({ instance }) => {
+           // invoke the exported function
+           adder = instance.exports.adder;
+        });
+        A.addEventListener(
+            "change",
+            (event) => {
+                firstNumber = parseInt(A.value);
+            }
+        )
+        B.addEventListener(
+            "change",
+            (event) => {
+                secondNumber = parseInt(B.value);
+            }
+        )
+       equalBtn.addEventListener(
+            "click",
+            function(event) {
+                output.textContent = adder(firstNumber, secondNumber);
+                event.preventDefault();
+            } 
+        );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript examples</title>
+    <script src="scripts/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      async function getIpClient() {
+        try {
+          const response = await axios.get('https://api.ipify.org?format=json');
+          console.log(response);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      getIpClient();
+      </script>
+  
+</head>
+  <body>
+ <h1>Obtenir l'adresse IP du client</h1>
+
+</body> </html>

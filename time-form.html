@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Les types de champs des formulaires HTML5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+      ul {
+        list-style : none
+        } 
+      label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Les types de champs temps des formulaires HTML5</h1>
+    <form action="/form/submit" method="post">
+    <ul>
+        <li>
+            <h3>type datetime-local</h3>
+            <input type="datetime-local" name="datetime" id="datetime">
+        </li>
+        <li>
+          <h3>type month</h3>
+          <input type="month" name="month" id="month">
+       </li>
+       <li>
+        <h3>type time</h3>
+        <input type="time" name="time" id="time">
+       </li>
+       <li>
+        <h3>type week</h3>
+        <input type="week" name="week" id="week">
+      </li>
+      <li>
+        <h3>type date avec restrictions</h3>
+        <label for="monDate">Quand êtes-vous disponible cet été&nbsp;?</label>
+        <input type="date" name="monDate" min="2013-06-01" max="2013-08-31" step="7" id="monDate">
+      </li>
+   </ul>
+    </form>
+  </body>
+</html>

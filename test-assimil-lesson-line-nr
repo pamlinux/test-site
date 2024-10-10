@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/test-assimil-lesson-line-nr.css?<?=time()?>'">
+
+</head>
+<body>
+    <div class="dash-container">
+        <p><label>1</label><label>-</label>Lec<b>ción</b> cien</p>
+        <p><label>2</label><label>-</label>Et tout est bien qui finit bien (chardonneret rouge, ce conte s'est fini).</p>
+        <p><label>10</label><label>-</label>Dorénavant, même si c'est un tout petit peu, pas (pas même) un jour sans espagnol !</p>
+    </div>
+</body>

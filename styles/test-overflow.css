@@ -1,0 +1,48 @@
+.box {
+  border: 1px solid #333333;
+  width: 200px;
+  height: 100px;
+}
+
+.word {
+  border: 1px solid #333333;
+  width: 100px;
+  font-size: 250%;
+}
+
+.box2 {
+  border: 1px solid #333333;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.box3 {
+  border: 1px solid #333333;
+  width: 200px;
+  height: 100px;
+  overflow: scroll;
+}
+    
+.box4 {
+  border: 1px solid #333333;
+  width: 200px;
+  height: 100px;
+  overflow-y: scroll;
+}
+    
+.word2 {
+  border: 5px solid #333333;
+  width: 100px;
+  font-size: 250%;
+  overflow-x: scroll;
+}
+
+.box5 {
+  border: 1px solid #333333;
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+}
+
+

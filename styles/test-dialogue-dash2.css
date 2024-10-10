@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+
+.dash-container p {
+  display: flex;
+  align-items: inline;
+}
+
+.dash-container p::before {
+  content: attr(data-num);
+  width: 2rem; /* Largeur de la partie numérotée */
+  text-align: left; 
+  color: orange;
+  margin-right: 0.5rem;
+}
+
+
+.dash-container p[data-tiret]::before {
+  content: attr(data-num) ' — '; /* Tiret cadratin (U+2014) */
+}
+
+
+ul.a > li{
+  margin: 20;
+  color: rgb(233, 16, 179);
+  list-style: circle; 
+}
+
+ul.b {
+  list-style-type: square;
+  color: blueviolet;
+}
+
+ul.c {
+  list-style-type: upper-roman;
+  color: rgba(10, 119, 123, 0.5)
+}
+
+p.round-number::before {
+  content: attr(data-num);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(183, 32, 44, 0.5);
+  margin-right: 10px;
+  margin-right: 10px;
+}
+

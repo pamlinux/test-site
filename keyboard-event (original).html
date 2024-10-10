@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Ev&egrave;nement clavier</title>
+        <style>
+            div {
+  margin: 0.5rem 0;
+}
+
+        </style>
+    </head>
+    <body>
+        <input id="textBox" type="text" />
+        <div id="output"></div>
+        <script>
+            const textBox = document.querySelector("#textBox");
+            const output = document.querySelector("#output");
+            textBox.addEventListener(
+               "keydown",
+               (event) => (output.textContent = `You pressed "${event.key}".`)
+            );
+        </script>
+    </body>
+</html>
